@@ -15,7 +15,7 @@ document.getElementById("ba-map").addEventListener("contextmenu", function (even
     if (!mouselatlon) return false;
 
     event.preventDefault();
-    L.marker([mouselatlon.lat, mouselatlon.lng], {title:`${mouselatlon.lat}, ${mouselatlon.lon}`}).addTo(ba_map);
+    L.marker([mouselatlon.lat, mouselatlon.lng], {title:`${mouselatlon.lat}, ${mouselatlon.lng}`}).addTo(ba_map);
     return false;
 });
 
