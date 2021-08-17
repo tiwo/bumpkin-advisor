@@ -12,6 +12,8 @@ map.addEventListener('mousemove', function(ev) {
 });
 
 document.getElementById("be-map").addEventListener("contextmenu", function (event) {
+    if (!mouselatlon) return false;
+    
     event.preventDefault();
     L.marker([mouselatlon.lat, mouselatlon.lng], {title:`${mouselatlon.lat}, ${mouselatlon.lon}`}).addTo(map);
     return false;
