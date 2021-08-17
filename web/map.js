@@ -7,15 +7,15 @@ var position_circle = null;
 
 var mouselatlon = null;
 
-map.addEventListener('mousemove', function(ev) {
+ba_map.addEventListener('mousemove', function(ev) {
    mouselatlon = ev.latlng;
 });
 
 document.getElementById("be-map").addEventListener("contextmenu", function (event) {
     if (!mouselatlon) return false;
-    
+
     event.preventDefault();
-    L.marker([mouselatlon.lat, mouselatlon.lng], {title:`${mouselatlon.lat}, ${mouselatlon.lon}`}).addTo(map);
+    L.marker([mouselatlon.lat, mouselatlon.lng], {title:`${mouselatlon.lat}, ${mouselatlon.lon}`}).addTo(ba_map);
     return false;
 });
 
