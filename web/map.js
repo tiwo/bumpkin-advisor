@@ -3,6 +3,7 @@
 var ba_map = L.map('ba-map').fitWorld();
 
 var position_marker = null;
+var position_circle = null;
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -40,9 +41,12 @@ function onLocationFound(e) {
 
     if (position_marker) {
         ba_map.removeLayer(position_marker);
+        ba_map.removeLayer(position_circle);
     }
-    position_marker = L.circle(e.latlng, radius)
+    position_marker = L.marker(e.latlng);
+    position_circle = L.circle(e.latlng, radius);
     position_marker.addTo(ba_map);
+    position_circle.addTo(ba_map);
 }
 
 ba_map.on('locationfound', onLocationFound);
