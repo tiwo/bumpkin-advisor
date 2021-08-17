@@ -30,6 +30,9 @@ L.gridLayer.debugCoords = function(opts) {
 ba_map.addLayer( L.gridLayer.debugCoords() );
 
 function onLocationFound(e) {
+
+    console.log("onLocationFound", e);
+
     var radius = e.accuracy;
 
     L.marker(e.latlng).addTo(map)
