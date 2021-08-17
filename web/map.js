@@ -12,6 +12,21 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(ba_map)
 
 
+L.GridLayer.DebugCoords = L.GridLayer.extend({
+    createTile: function (coords) {
+        var tile = document.createElement('div');
+        tile.innerHTML = [coords.x, coords.y, coords.z].join(', ');
+        tile.style.outline = '1px solid red';
+        return tile;
+    }
+});
+
+L.gridLayer.debugCoords = function(opts) {
+    return new L.GridLayer.DebugCoords(opts);
+};
+
+ba_map.addLayer( L.gridLayer.debugCoords() );
+
 ba_map.locate({setView: false, maxZoom: 10});
 
 /*
