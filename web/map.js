@@ -36,7 +36,7 @@ L.GridLayer.DebugCoords = L.GridLayer.extend({
         var tile = document.createElement('div');
         tile.innerHTML = [coords.x, coords.y, coords.z].join(', ');
         tile.style.outline = '1px solid #bbb';
-        tile.style.color = '#bbb';
+        tile.style.opacity = .5;
         return tile;
     }
 });
