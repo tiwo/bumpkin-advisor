@@ -35,14 +35,14 @@ function onLocationFound(e) {
 
     var radius = e.accuracy;
 
-    L.marker(e.latlng).addTo(map)
-        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+    //L.marker(e.latlng).addTo(ba_map)
+    //    .bindPopup("You are within " + radius + " meters from this point").openPopup();
 
     if (position_marker) {
         ba_map.removeLayer(position_marker);
     }
     position_marker = L.circle(e.latlng, radius)
-    position_marker.addTo(map);
+    position_marker.addTo(ba_map);
 }
 
 ba_map.on('locationfound', onLocationFound);
