@@ -5,6 +5,19 @@ var ba_map = L.map('ba-map').fitWorld();
 var position_marker = null;
 var position_circle = null;
 
+var mouselatlon = null;
+
+map.addEventListener('mousemove', function(ev) {
+   mouselatlon ev.latlng;
+});
+
+document.getElementById("be-map").addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+    L.marker([lat, lng], {title:`${lat}, ${lon}`}).addTo(map);
+    return false;
+});
+
+
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
