@@ -10,7 +10,8 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     maxZoom: 18,
     tileSize: 512,
     zoomOffset: -1,
-    id: 'mapbox/streets-v11',
+    //id: 'mapbox/streets-v11',
+    id: 'tiwo/ckc70qqij1t3z1iowlwrfti8q',
     accessToken: 'pk.eyJ1IjoidGl3byIsImEiOiJja3Nmdnc5a3oxZThoMzBvZHV4eTN0eXhwIn0.5eyeTLtyEYGIm8oCKbEbGg'
 }).addTo(ba_map)
 
