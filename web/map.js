@@ -47,6 +47,8 @@ function onLocationFound(e) {
     position_circle = L.circle(e.latlng, radius);
     position_marker.addTo(ba_map);
     position_circle.addTo(ba_map);
+
+    console.log(position_marker, position_circle);
 }
 
 ba_map.on('locationfound', onLocationFound);
