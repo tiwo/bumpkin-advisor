@@ -85,7 +85,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 */
 
 L.tileLayer.wms(
-    'https://sgx.geodatenzentrum.de/wms_tk200_ddr?', {layers: 'staat'}
+    'https://sgx.geodatenzentrum.de/wms_tk200_ddr?', {layers: 'volk'}
 ).addTo(ba_map);
 
 L.control.scale({maxWidth: 500}).addTo(ba_map);
