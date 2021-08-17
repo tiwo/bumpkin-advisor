@@ -35,7 +35,8 @@ L.GridLayer.DebugCoords = L.GridLayer.extend({
     createTile: function (coords) {
         var tile = document.createElement('div');
         tile.innerHTML = [coords.x, coords.y, coords.z].join(', ');
-        tile.style.outline = '1px solid gray';
+        tile.style.outline = '1px solid #bbb';
+        tile.style.color = '#bbb';
         return tile;
     }
 });
