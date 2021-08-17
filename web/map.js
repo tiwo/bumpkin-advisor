@@ -11,7 +11,7 @@ ba_map.addEventListener('mousemove', function(ev) {
    mouselatlon = ev.latlng;
 });
 
-document.getElementById("be-map").addEventListener("contextmenu", function (event) {
+document.getElementById("ba-map").addEventListener("contextmenu", function (event) {
     if (!mouselatlon) return false;
 
     event.preventDefault();
