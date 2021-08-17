@@ -27,7 +27,7 @@ L.gridLayer.debugCoords = function(opts) {
 
 ba_map.addLayer( L.gridLayer.debugCoords() );
 
-ba_map.locate({setView: false, maxZoom: 10});
+ba_map.locate({setView: true, maxZoom: 10});
 
 /*
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
