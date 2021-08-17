@@ -8,12 +8,12 @@ var position_circle = null;
 var mouselatlon = null;
 
 map.addEventListener('mousemove', function(ev) {
-   mouselatlon ev.latlng;
+   mouselatlon = ev.latlng;
 });
 
 document.getElementById("be-map").addEventListener("contextmenu", function (event) {
     event.preventDefault();
-    L.marker([lat, lng], {title:`${lat}, ${lon}`}).addTo(map);
+    L.marker([mouselatlon.lat, mouselatlon.lng], {title:`${mouselatlon.lat}, ${mouselatlon.lon}`}).addTo(map);
     return false;
 });
 
