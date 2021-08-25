@@ -73,7 +73,7 @@ ba_map.on('locationfound', onLocationFound);
 
 window.setInterval(
     () => {ba_map.locate({setView: true, maxZoom: 17})},
-    5000
+    1500
 );
 
 
