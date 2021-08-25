@@ -70,7 +70,12 @@ function onLocationFound(e) {
 
 ba_map.on('locationfound', onLocationFound);
 
-ba_map.locate({setView: true, maxZoom: 17});
+
+window.setInterval(
+    () => {ba_map.locate({setView: true, maxZoom: 17})},
+    5000
+);
+
 
 /*
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
